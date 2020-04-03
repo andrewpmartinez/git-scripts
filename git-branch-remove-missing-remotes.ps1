@@ -1,0 +1,1 @@
+git branch -vv --format='%(if)%(upstream:track,nobracket)%(then)%(refname:short)%(end)' | ? {$_.Trim()-ne ""}| ForEach-Object {git branch -D $_}
